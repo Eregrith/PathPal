@@ -5,10 +5,24 @@
     xmlns:local="using:PathPal"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
-
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock x:Name="SplashText" HorizontalAlignment="Left" Margin="535,336,0,0" TextWrapping="Wrap" Text="Path Pal" VerticalAlignment="Top" Height="83" Width="289" FontSize="72" FontFamily="Arial Black" FontWeight="Bold"/>
-
+    mc:Ignorable="d" Width="1371.4" Height="771.4">
+<Page.TopAppBar>
+            <AppBar>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="Wall" Width="140" Height="80" Click="SelectWallButton_Click"/>
+                        <Button Content="Hero" Width="140" Height="80" Click="SelectHeroButton_Click"/>
+                        <Button Content="Monster" Width="140" Height="80" Click="SelectMonsterButton_Click"/>
+                    </StackPanel>
+                    <SearchBox Grid.Column="1" Width="300" Height="50" HorizontalAlignment="Right"/>
+                </Grid>
+            </AppBar>
+        </Page.TopAppBar>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,10.429,0.429">
+        
     </Grid>
 </Page>

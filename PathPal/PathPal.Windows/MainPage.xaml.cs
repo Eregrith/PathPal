@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PathPal.Enums;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,27 @@ namespace PathPal
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public BrushType SelectedBrush { get; set; }
+        public Size BrushSize { get; set; }
+
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private void SelectWallButton_Click(object sender, RoutedEventArgs e)
+        {
+            SelectedBrush = BrushType.Wall;
+        }
+
+        private void SelectHeroButton_Click(object sender, RoutedEventArgs e)
+        {
+            SelectedBrush = BrushType.Hero;
+        }
+
+        private void SelectMonsterButton_Click(object sender, RoutedEventArgs e)
+        {
+            SelectedBrush = BrushType.Monster;
         }
     }
 }
